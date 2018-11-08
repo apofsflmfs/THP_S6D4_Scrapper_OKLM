@@ -1,0 +1,42 @@
+<h1>CryptoScrapper.com</h1><br>
+<h3>All virtual currencies online !</h3>
+<br>
+
+<div class="row">
+    
+    <div class="col-md-4 offset-md-1">
+        <h3>Afficher le cours d'une crypto</h3>
+            <%= form_for @crypto, :url => show_path do |f| %>
+
+        <div class="form-group">
+            <label>Choix de la crypto</label>  
+            <%= f.collection_select :id, Crypto.order(:name),:id,:name, {include_blank: false}, {class: "form-control"} %>
+        </div>
+
+        <%= f.submit 'Envoyer', class: 'btn btn-outline-primary' %>
+        <br><br>
+
+    <% end %>
+    </div>
+
+    <div class="col-md-4 offset-md-1">
+        <h3>Mettre à jour la base de données</h3><br>
+        <p>Dernière mise à jour le <%= @time.strftime("%e/%-m/%Y à %kh%M (UTC)") %></p>
+        <a class="btn btn-outline-success" href="<%= update_path %>">Click here to update</a> <br>
+    </div>
+
+</div>
+
+<br><br>
+
+
+<div class="row">
+
+    <div class="col-md-4 offset-md-4">
+        <% if @crypto.name %>
+            <h3><%= @crypto.name %> = $<%= @crypto.price %></h3>
+        <% end %>
+
+    </div>
+
+</div>
