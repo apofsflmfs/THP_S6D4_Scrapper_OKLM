@@ -2,6 +2,9 @@ class HomeController < ApplicationController
   
   def index
     @crypto = Crypto.new
+    unless Crypto.first
+      self.update
+    end 
     @time = Crypto.first.updated_at
   end
 

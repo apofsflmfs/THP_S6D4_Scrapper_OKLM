@@ -1,24 +1,8 @@
-# README
+# COIN SCRAP OKLM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Pair programming @Clem B & @Lea Lp
 
-Things you may want to cover:
 
-* Ruby version
+## Lien du site en ligne : 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://coin-scrap-oklm.herokuapp.com/
