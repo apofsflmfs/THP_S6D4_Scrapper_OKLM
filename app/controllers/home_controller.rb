@@ -17,6 +17,8 @@ class HomeController < ApplicationController
 
   def show
     @crypto = Crypto.find(params[:crypto][:id])
+    @time = Crypto.first.updated_at
+    
     render 'index'
   end 
 
